@@ -1,38 +1,95 @@
 .App {
   text-align: center;
+  height: 100vh;
+  font-family: "Open Sans";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-body{
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.day{
+  background-image: url("./images/day.jpeg") ,linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.night{
+  background-image: url("./images/night.jpeg") ,linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
-.App-link {
-  color: #61dafb;
+.rain{
+  background-image: url("./images/rain.jpg") ,linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.snow{
+  background-image: url("./images/snow.jpeg") ,linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.warm{
+  background-image: url("./images/warm.jpeg") ,linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.search-group{
+  padding: 15px;
+}
+
+.search-input{
+  padding: 10px;
+  min-width: 300px;
+  border: 2px solid black;
+  font-size: 1.5rem;
+}
+
+.weather-text{
+  margin-top: 4rem;
+  color: #fff;
+}
+
+.city-name{
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.date{
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.temperature-box{
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 15px 45px;
+  border-radius: 35px;
+}
+
+.temperature{
+  font-size: 5rem;
+}
+
+.weather-condition{
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-top: 10px;
 }
