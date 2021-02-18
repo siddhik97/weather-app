@@ -23,6 +23,28 @@ function App() {
       }
   }
 
+  const getTimeOfDay = () => {
+      let newDate = new Date()
+      let hours = newDate.getHours();
+      let timeOfDay = null;
+
+      (hours>6 && hours<18) ? timeOfDay = "day" : timeOfDay = "night";
+
+      return timeOfDay;
+  }
+
+  const getDate = () => {
+      let monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      let dayArr = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
+      let newDate = new Date()
+      let date = newDate.getDate();
+      let month = monthArr[newDate.getMonth() + 1];
+      let year = newDate.getFullYear();
+
+      return `${month} ${date}, ${year} - ${dayArr[newDate.getDay()]}day`
+
+  }
+
     return (
     <div className="App">
       <Container className={ weather ?
@@ -32,7 +54,7 @@ function App() {
               weather.weather[0].main === "Rain"
                   ? "app-body rain" : "app-body warm"
           ))
-          : "app-body day"}>
+          : getTimeOfDay()==="day"? "app-body day" : "app-body night"}>
         <Row>
           <Col xs={12}>
               <InputGroup className="text-center search-group">
@@ -50,7 +72,7 @@ function App() {
                 <h1 className={"city-name"}>
                     {weather ? (weather.name + ", " + weather.sys.country) : ""}
                 </h1>
-                <h3 className={"date"}>Feburary 15, 2020 - Monday</h3>
+                <h3 className={"date"}>{getDate()}</h3>
                 {!weather ? ("") : (
                     <div className={"temperature-box"}>
                         <h1 className={"temperature"}>

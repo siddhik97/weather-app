@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+  transition: 4s ease;
 }
 
 .night{
@@ -22,6 +23,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+  transition: 4s ease;
 }
 
 .rain{
@@ -30,6 +32,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+  transition: 4s ease;
 }
 
 .snow{
@@ -38,6 +41,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+  transition: 4s ease;
 }
 
 .warm{
@@ -46,6 +50,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+  transition: 4s ease;
 }
 
 .search-group{
@@ -65,7 +70,7 @@
 }
 
 .city-name{
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   margin-bottom: 0;
 }
@@ -92,4 +97,23 @@
   font-weight: normal;
   font-size: 2rem;
   margin-top: 10px;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 400px) {
+  .search-input{
+    max-width: 100px;
+  }
+
+  .temperature-box{
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+  }
+
+  .temperature{
+    font-size: 4rem;
+  }
 }
